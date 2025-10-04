@@ -1,0 +1,6 @@
+# https://www.robotstxt.org/robotstxt.html
+User-agent: *
+Disallow:
+# Block internal registration page
+Disallow: /register-internal
+Disallow: /register-internal/
