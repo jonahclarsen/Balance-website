@@ -13,14 +13,6 @@ const config = {
       allowed: ['PATCH', 'DELETE']
     }
   },
-  preprocess: [
-    mdsvex({
-      extensions: ['.md'],
-      layout: {
-        _: fileURLToPath(new URL('./src/lib/MarkdownLayout.svelte', import.meta.url))
-      }
-    })
-  ]
 };
 
 export default config;
