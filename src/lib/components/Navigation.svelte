@@ -1,5 +1,6 @@
 <script>
     import { onMount, onDestroy } from "svelte";
+    import DownloadButton from "./DownloadButton.svelte";
 
     let scrolled = false;
 
@@ -59,10 +60,6 @@
             </a>
         </div>
 
-        <button
-            class="bg-foreground text-background hover:bg-foreground/90 px-4 py-2 rounded-md transition-colors font-medium"
-        >
-            Download for macOS
-        </button>
+        <DownloadButton variant="primary" size="small" />
     </div>
 </nav>

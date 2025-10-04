@@ -3,7 +3,7 @@
 </script>
 
 <a
-    href="https://discord.gg/your-discord-link"
+    href="https://discord.gg/FBzT65aZ"
     target="_blank"
     rel="noopener noreferrer"
     class="inline-flex items-center gap-2 px-6 py-3 bg-[#5865F2] hover:bg-[#4752C4] text-white rounded-lg font-medium transition-colors"

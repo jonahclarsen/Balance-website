@@ -1,5 +1,6 @@
 <script>
     import { onMount, onDestroy } from "svelte";
+    import DownloadButton from "./DownloadButton.svelte";
 
     let canvas;
     let animationFrame;
@@ -18,26 +19,27 @@
         window.addEventListener("resize", resizeCanvas);
 
         // Create animated gradient orbs
+        let orb_opacity = 0.4;
         const orbs = [
             {
                 x: 0.2,
                 y: 0.3,
                 radius: 300,
-                color1: "rgba(59, 130, 246, 0.3)",
+                color1: `rgba(59, 130, 246, ${orb_opacity})`,
                 color2: "rgba(59, 130, 246, 0)",
             },
             {
                 x: 0.8,
                 y: 0.4,
                 radius: 350,
-                color1: "rgba(251, 146, 60, 0.3)",
+                color1: `rgba(251, 146, 60, ${orb_opacity})`,
                 color2: "rgba(251, 146, 60, 0)",
             },
             {
                 x: 0.5,
                 y: 0.7,
                 radius: 280,
-                color1: "rgba(99, 102, 241, 0.2)",
+                color1: `rgba(99, 102, 241, ${orb_opacity * 0.67})`,
                 color2: "rgba(99, 102, 241, 0)",
             },
         ];
@@ -94,25 +96,21 @@
         bind:this={canvas}
         class="absolute inset-0 w-full h-full"
         style="filter: blur(80px);"
-    />
+    ></canvas>
 
     <div class="relative z-10 container mx-auto px-6 text-center">
-        <div
-            class="inline-block mb-6 px-4 py-2 rounded-full bg-muted/50 backdrop-blur-sm border border-border"
-        >
-            <span class="text-sm text-muted-foreground"
-                >Now available for macOS</span
-            >
-        </div>
-
+        <br />
+        <br />
+        <br />
+        <br />
         <h1
             class="text-6xl md:text-8xl lg:text-9xl font-bold mb-6 text-balance leading-[0.95] tracking-tight"
         >
             The only timer<br />
             that tracks your<br />
             <span
-                class="bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent"
-                >purpose</span
+                class="bg-clip-text bg-gradient-to-r from-cyan-300 via-blue-300 via-purple-300 to-pink-400"
+                style="color: rgba(1, 1, 1, 0.1);">purpose</span
             >
         </h1>
 
@@ -130,33 +128,13 @@
             <button
                 class="text-lg px-8 py-6 bg-foreground text-background hover:bg-foreground/90 rounded-md transition-colors font-medium"
             >
-                Download for macOS
+                Find Your Balance
             </button>
-            <button
-                class="text-lg px-8 py-6 bg-transparent border-2 border-border hover:bg-muted transition-colors rounded-md font-medium"
-            >
-                Watch Demo
-            </button>
+            <DownloadButton variant="secondary" size="default" />
         </div>
 
         <p class="mt-8 text-sm text-muted-foreground">
-            Free • macOS 12.0 or later • 8MB
+            Free • macOS 12.0 or later
         </p>
-    </div>
-
-    <div class="absolute bottom-12 left-1/2 -translate-x-1/2 animate-bounce">
-        <svg
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            class="text-muted-foreground"
-        >
-            <path d="M12 5v14M19 12l-7 7-7-7" />
-        </svg>
     </div>
 </section>
