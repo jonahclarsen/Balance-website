@@ -19,8 +19,8 @@ importers:
         specifier: 1.0.0-next.65
         version: 1.0.0-next.65
       '@sveltejs/adapter-static':
-        specifier: ^3.0.10
-        version: 3.0.10(@sveltejs/kit@1.0.0-next.428(svelte@3.59.2)(vite@3.2.11(@types/node@24.3.0)(sass@1.90.0)))
+        specifier: 1.0.0-next.50
+        version: 1.0.0-next.50(@sveltejs/kit@1.0.0-next.428(svelte@3.59.2)(vite@3.2.11(@types/node@24.3.0)(sass@1.90.0)))
       '@sveltejs/kit':
         specifier: 1.0.0-next.428
         version: 1.0.0-next.428(svelte@3.59.2)(vite@3.2.11(@types/node@24.3.0)(sass@1.90.0))
@@ -234,10 +234,10 @@ packages:
   '@sveltejs/adapter-netlify@1.0.0-next.71':
     resolution: {integrity: sha512-la1CGtWO1xul1L3zEoFAoc4EX2uxZjrZcOMS3tkKB8drxhbQsNbnTE6fmSSMFiZXhxaikczrBgQwqIaDkLTmZg==}
 
-  '@sveltejs/adapter-static@3.0.10':
-    resolution: {integrity: sha512-7D9lYFWJmB7zxZyTE/qxjksvMqzMuYrrsyh1f4AlZqeZeACPRySjbC3aFiY55wb1tWUaKOQG9PVbm74JcN2Iew==}
+  '@sveltejs/adapter-static@1.0.0-next.50':
+    resolution: {integrity: sha512-xZKBmiwFGW8nrH8+eysUAAo9XrtApI81q0m67y1bexVw8IY7/x741b6VEklNM7BZ7js0Mi2x+yCkHpOee8UZKQ==}
     peerDependencies:
-      '@sveltejs/kit': ^2.0.0
+      '@sveltejs/kit': ^1.0.0-next.587
 
   '@sveltejs/adapter-vercel@1.0.0-next.67':
     resolution: {integrity: sha512-xg85d/vlivbTaZu70zmaPNkrY1YZhDrcxljuwVWO0LCzA4DACIA7CnXI9klUiXM5SPpsB8BhY6dS8sW5cDYWzw==}
@@ -1624,7 +1624,7 @@ snapshots:
       set-cookie-parser: 2.7.1
       tiny-glob: 0.2.9
 
-  '@sveltejs/adapter-static@3.0.10(@sveltejs/kit@1.0.0-next.428(svelte@3.59.2)(vite@3.2.11(@types/node@24.3.0)(sass@1.90.0)))':
+  '@sveltejs/adapter-static@1.0.0-next.50(@sveltejs/kit@1.0.0-next.428(svelte@3.59.2)(vite@3.2.11(@types/node@24.3.0)(sass@1.90.0)))':
     dependencies:
       '@sveltejs/kit': 1.0.0-next.428(svelte@3.59.2)(vite@3.2.11(@types/node@24.3.0)(sass@1.90.0))
 
