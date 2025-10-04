@@ -31,12 +31,7 @@
 >
     <div class="container mx-auto px-6 py-4 flex items-center justify-between">
         <div class="flex items-center gap-2">
-            <div
-                class="w-8 h-8 rounded-lg bg-primary flex items-center justify-center"
-            >
-                <span class="text-primary-foreground font-bold text-lg">B</span>
-            </div>
-            <span class="text-xl font-bold">Balance</span>
+            <img src="/logo.svg" alt="Balance Logo" class="h-5 w-auto" />
         </div>
 
         <div class="hidden md:flex items-center gap-8">
