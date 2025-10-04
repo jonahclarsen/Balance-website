@@ -1,4 +1,4 @@
-import adapter from '@sveltejs/adapter-auto';
+import adapter from '@sveltejs/adapter-static';
 import { mdsvex } from 'mdsvex';
 import { fileURLToPath, URL } from 'url';
 
@@ -6,13 +6,21 @@ import { fileURLToPath, URL } from 'url';
 const config = {
   extensions: ['.svelte', '.md'],
   kit: {
-    adapter: adapter(),
-
-    // Override http methods in the Todo forms
-    methodOverride: {
-      allowed: ['PATCH', 'DELETE']
-    }
+    adapter: adapter({
+      pages: 'build',
+      assets: 'build',
+      precompress: false,
+      strict: false
+    }),
   },
+  preprocess: [
+    mdsvex({
+      extensions: ['.md'],
+      layout: {
+        _: fileURLToPath(new URL('./src/lib/MarkdownLayout.svelte', import.meta.url))
+      }
+    })
+  ]
 };
 
 export default config;
