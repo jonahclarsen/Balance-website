@@ -22,7 +22,7 @@
         let orb_opacity = 0.4;
         const orbs = [
             {
-                x: 0.2,
+                x: 0.15,
                 y: 0.3,
                 radius: 300,
                 color1: `rgba(59, 130, 246, ${orb_opacity})`,
@@ -37,7 +37,7 @@
             },
             {
                 x: 0.5,
-                y: 0.7,
+                y: 0.55,
                 radius: 280,
                 color1: `rgba(99, 102, 241, ${orb_opacity * 0.67})`,
                 color2: "rgba(99, 102, 241, 0)",
@@ -56,13 +56,17 @@
                 const x = orb.x * canvas.width + offsetX;
                 const y = orb.y * canvas.height + offsetY;
 
+                // Subtle breathing scale effect (slow sine wave)
+                const breathScale = 1 + Math.sin(time * 3 + index * 0.5) * 0.5;
+                const scaledRadius = orb.radius * breathScale;
+
                 const gradient = ctx.createRadialGradient(
                     x,
                     y,
                     0,
                     x,
                     y,
-                    orb.radius,
+                    scaledRadius,
                 );
                 gradient.addColorStop(0, orb.color1);
                 gradient.addColorStop(1, orb.color2);
